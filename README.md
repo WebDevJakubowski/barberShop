@@ -1,6 +1,5 @@
-Strona dla lokalnego biznesu AutoDetailing
-
-https://detailingkarczoch.cfolks.pl/
+Strona dla lokalnego biznesu BarberShop
+https://barber.cfolks.pl/
 
 Copyright (c) 2025 WebDevJakubowski
 
