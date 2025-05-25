@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { JetBrains_Mono, Oswald, Raleway } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-jetbrainsMono",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const oswald = Oswald({
   subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-oswald",
+});
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-raleway",
 });
 
 export const metadata: Metadata = {
@@ -23,9 +31,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pl">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${jetbrainsMono.variable} ${oswald.variable} ${raleway.variable} antialiased bg-[#101010] text-white`}
       >
         {children}
       </body>
